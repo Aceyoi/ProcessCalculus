@@ -33,7 +33,7 @@ namespace Csharp_async
                 {
                     progress?.Report((int)(i * 100 / n));
                 }
-            }
+            }//
 
             progress?.Report(100);
             return sum;

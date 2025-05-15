@@ -1,0 +1,15 @@
+C:\Users\Fmudi\Desktop\ASD\bin\Debug\Csharp_async.exe.config
+C:\Users\Fmudi\Desktop\ASD\bin\Debug\Csharp_async.exe
+C:\Users\Fmudi\Desktop\ASD\bin\Debug\Csharp_async.pdb
+C:\Users\Fmudi\Desktop\ASD\obj\Debug\Csharp_async.csproj.AssemblyReference.cache
+C:\Users\Fmudi\Desktop\ASD\obj\Debug\MainWindow.g.cs
+C:\Users\Fmudi\Desktop\ASD\obj\Debug\App.g.cs
+C:\Users\Fmudi\Desktop\ASD\obj\Debug\Csharp_async_MarkupCompile.cache
+C:\Users\Fmudi\Desktop\ASD\obj\Debug\Csharp_async_MarkupCompile.lref
+C:\Users\Fmudi\Desktop\ASD\obj\Debug\MainWindow.baml
+C:\Users\Fmudi\Desktop\ASD\obj\Debug\Csharp_async.g.resources
+C:\Users\Fmudi\Desktop\ASD\obj\Debug\Csharp_async.Properties.Resources.resources
+C:\Users\Fmudi\Desktop\ASD\obj\Debug\Csharp_async.csproj.GenerateResource.cache
+C:\Users\Fmudi\Desktop\ASD\obj\Debug\Csharp_async.csproj.CoreCompileInputs.cache
+C:\Users\Fmudi\Desktop\ASD\obj\Debug\Csharp_async.exe
+C:\Users\Fmudi\Desktop\ASD\obj\Debug\Csharp_async.pdb
