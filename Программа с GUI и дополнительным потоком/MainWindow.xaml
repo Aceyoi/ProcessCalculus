@@ -14,7 +14,7 @@
         <Button x:Name="btn_check" Content="Проверить" HorizontalAlignment="Left" Margin="405,238,0,0" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.499,0.962" Height="25" Click="btn_check_Click"/>
         <Button x:Name="btn_fill" Content="Заполнение массива" HorizontalAlignment="Left" Margin="285,14,0,0" VerticalAlignment="Top" Width="167" Click="btn_fill_Click" Height="25"/>
         <Button x:Name="btn_stop" Content="Стоп" HorizontalAlignment="Left" Margin="182,186,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.499,0.962" Height="25" Click="btn_stop_Click"/>
-        
+
         <Label Content="Вычислить" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Height="31" Width="89"/>
         <Label Content="Количество" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="31" Width="96"/>
         <Label Content="Результат" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" Height="31" Width="80"/>
