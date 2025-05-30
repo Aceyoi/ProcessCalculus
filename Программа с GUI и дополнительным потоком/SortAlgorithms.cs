@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Cапожников Юрий ИВТ-22
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -34,35 +35,34 @@ namespace Csharp_async
         }
 
         // Многопоточная паррарельная сортировка с пулом задач
+        // Task - Представляет асинхронную операцию без результата <-- Создание потока
+        // async - Включает асинхронность в методе, позволяет использовать
         public async Task ParallelSortWithThreadPool(int[] array, int maxThreads, Action<int> reportProgress)
         {
-            int length = array.Length;
+            int length = array.Length;// Определяем длину входного массива
 
             // Вычисляем размер части массива для каждого потока
 
-            int chunkSize = length / maxThreads;
-            var chunks = new List<int[]>();
-            int remaining = length % maxThreads;
+            int chunkSize = length / maxThreads;  // Вычисляем размер массива на каждый поток
+            var chunks = new List<int[]>();      // Список для хранения частей исходного массива
+            int remaining = length % maxThreads;// Остаток элементов
 
             // Разбиваем массив на части для параллельной обработки
-
             int index = 0;
             for (int i = 0; i < maxThreads; i++)//Максимальное количество потоков
             {
                 int size = chunkSize + (i < remaining ? 1 : 0);
-                int[] chunk = new int[size];
-                Array.Copy(array, index, chunk, 0, size);
-                chunks.Add(chunk);
+                int[] chunk = new int[size];// Создаём массив нужного размера
+                Array.Copy(array, index, chunk, 0, size);//// Копируем соответствующую часть
+                chunks.Add(chunk);// Добавляем в список
                 index += size;
             }
 
             // Семафор (мьютекс) для ограничения количества одновременно работающих потоков
-
             var semaphore = new SemaphoreSlim(maxThreads);
             int completed = 0;// Счетчик завершенных задач
 
-            // Создаем задачи для каждой части
-
+            // Создаем задачи для каждой части  
             var tasks = chunks.Select(async chunk =>
             {
                 await semaphore.WaitAsync();// Ожидаем свободный поток
@@ -73,7 +73,6 @@ namespace Csharp_async
                     Array.Sort(chunk);
 
                     // Увеличиваем счетчик завершенных задач и отчет о прогрессе
-
                     int current = Interlocked.Increment(ref completed);
                     reportProgress?.Invoke(current * 100 / chunks.Count);
                 }

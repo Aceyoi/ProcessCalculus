@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Cапожников Юрий ИВТ-22
+using System;
 using System.Windows;
 using System.Threading.Tasks;
 
