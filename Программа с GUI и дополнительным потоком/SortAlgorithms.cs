@@ -63,7 +63,9 @@ namespace Csharp_async
             int completed = 0;// Счетчик завершенных задач
 
             // Создаем задачи для каждой части  
-            var tasks = chunks.Select(async chunk =>
+            var tasks = chunks.Select(async chunk => // Select принимает функцию с телом функции {} (Созданный объект) и объектом chunk 
+// Select возвращает коллекцию преобразованных объектов 
+// Select обходит элемент chunks и для каждого создаёт ассихроную задачу tasks
             {
                 await semaphore.WaitAsync();// Ожидаем свободный поток
                 try
