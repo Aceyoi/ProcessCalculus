@@ -43,7 +43,8 @@ namespace Csharp_async
 
             textbox_result.Text = $"Сортировка завершена (основной поток) за {stopwatch.ElapsedMilliseconds} мс.";
         }
-
+// async - включает асинхронный метод 
+// await - блокирует поток task, но не блокирует асинхронный поток async
         private async void btn_task_Click(object sender, RoutedEventArgs e)
         {
             if (arrayManager.Numbers == null) return;
